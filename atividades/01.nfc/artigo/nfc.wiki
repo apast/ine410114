@@ -1,0 +1,11 @@
+= Introdução =
+
+Comunicação por Campo Próximo (Near Field Communication, NFC) define uma tecnologia de comunicação sem fio entre dois dispositivos por proximidade. Esta tecnologia foi construida a partir da especificação de Radio Frequency Identification (RFID).
+
+= Visão Geral da Pilha de Protocolos =
+
+= Camada Física =
+
+= Camada de Enlace =
+
+= Camada de Rede no que concerne suporte a IP =
