@@ -40,16 +40,69 @@
 
 
 \section{Introdução}
-Comunicação por Campo Próximo (Near Field Communication, NFC) define uma tecnologia de comunicação sem fio entre dois dispositivos por proximidade. Esta tecnologia foi construida a partir da especificação de Radio Frequency Identification (RFID)\cite{iso14443-2}.
+Comunicação por Campo Próximo (Near Field Communication, NFC) define uma tecnologia de comunicação sem fio de curta distância entre dispositivos em contato ou momentaneamente próximos, com distância até 10 cm, com variações de acordo com a experiência ao usuário desejada.
+
+É uma tecnologia aberta, definida e padronizada pelo NFC Forum. É baseada na especificação de Radio Frequency Identification (RFID)\cite{iso14443}, além de apresentar extensões sobre esta.
+
+O padrão suporta diferentes taxas de transmissão, como 106kBps, 212kBps e 424kBps.
+
+\subsection{Tag e Leitor}
+A comunicação entre dispositivos utilizando NFC ocorre quando um dispositivo atua como leitor/escritor e o segundo como \emph{tag}
+
+A \emph{tag} é um dispositivo simples, pequeno e fino, contém uma antena e uma pequena memória. A memória pode permitir somente-leitura, leituras e escritas ou somente escritas. Atua como em modo passivo, alimentado por um campo magnético.
+
+O leitor é um dispositivo que opera em modo ativo, com geração de sinais de rádio para comunicação com \emph{tags}. 
+
+\subsection{Modos de Comunicação}
+Dispositivos NFC podem suportar comunicação em modos Ativo e Passivo.
+
+No modo Ativo, ambos dispositivos possuem fonte de energia autônoma e conversam entre si alternando a transmissão de sinal.
+
+Em modo passivo, o dispositivo iniciador gera um sinal de rádio e o dispositivo destinatário é alimentado por este campo eletromagnético. O dispositivo destinatário responde ao iniciador pela modulação do campo eletromagnético existente.
+
+\subsection{Modo Operacional}
+O padrão NFC estabelece três modelos operacionais, de acordo com os padrões ECMA 340 NFCIP-1 e ISO 14443. Os modelos são: leitura/escrita, ponto-a-ponto e emulação de cartão.
+
+No modo leitura/escrita, dispositivos NFC-enabled podem ler ou escrever dados em tipos de tags suportados em um formato de dados suportado pela NFC.
+
+No modo ponto-a-ponto, dispositivos NFC-enabled podem trocar dados. Pode-se utilizar NFC para troca de parâmetros de configuração para a troca de dados utilizando outro meio de comunicação, como Bluetooth e Wi-fi. Além de parâmetros, pode-se transmitir também dados gerais, como fotos, identidades eletrônicas, cartões de visita, dentre outros.
+
+No modo de emulação de cartão, o dispositivo atua como uma tag para a interação com outros dispositivos leitores.
+
+\section{Especificações Relacionadas}
+\subsection{ISO 14443}
+Padrão difundido para comunicação entre cartões, sem contato, para operação por radio sob 13.56 MHz. A especificação ISO 14443\cite{iso14443} define a pilha de protocolos desde a camada física de rádio até os comandos de protocolo.
+
+A camada física é dividida em duas versões, ISO 14443-2 A e B, com diferentes modulações e métodos de codificação de bits. Da mesma maneira, a camada de quadros e pacotes também segue a mesma divisão, definida por ISO 14443-3 A e B. A camada de inteface de comandos é únificada, definida por 14443-4, contendo informações de transferência de dados.
+
+INSERIR IMAGEM {ISO14443-fullstack}
+
+\subsection{NFCIP-1}
+A comunicação ponto-a-ponto entre dois dispositivos NFC é possível devido à especificação Near Field Communication - Interface and Protocol Specification, NFCIP-1, também referenciada por ISO 18902 e ECMA-340. A pilha de protocolos da NFCIP-1 é baseada na especificação ISO 14443, diferenciando-se pela troca da camada de protocolo de comandos.
+
+INSERIR IMAGEM {ISO14443-fullstack}
+
+\subsection{MIFARE}
+Esta especificação refere-se 
 
 \section{Visão Geral da Pilha de Protocolos}
+
+
 \section{Camada Física}
 
 
 \section{Camada de Enlace}
 \section{Camada de Rede no que concerne suporte a IP}
 
-
+\section{Casos de Uso}
+Nesta seção, são apresentados alguns casos de uso do padrão NFC.
+\begin{itemize}
+    \item{Inicialização de Serviço}
+    \item{Compartilhamento de Dados}
+    \item{Conexão entre Dispositivos}
+    \item{Ticketing}
+    \item{Pagamentos}
+\end{itemize}
 
 
 \bibliographystyle{plain}
